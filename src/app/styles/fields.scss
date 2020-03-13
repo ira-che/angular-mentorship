@@ -1,0 +1,45 @@
+@import 'colors.scss';
+@import 'variables.scss';
+
+input {
+  font-size: $font-size;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid map-get($field, "border");
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.text-field,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  border: 1px solid map-get($field, "border-dark");
+  background-color: $bg_color;
+  color: map-get($field, "font-color");
+  font-size: $font-size;
+  cursor: pointer;
+  outline: 0;
+}
+
+.text-field:hover,
+.text-field:focus,
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus {
+  border-color: $base-color;
+}

@@ -1,0 +1,35 @@
+<div *ngIf="products">
+  <div
+    *ngFor="let product of products; index as productId; trackBy: trackByFunc">
+    <h3 class="item-header">
+      <a
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', productId]"
+        class="title">
+        {{ product.name }}
+      </a>
+      <div
+        *ngIf='product.description'
+        type="button"
+        class="button fancy-button">
+        <input
+          type="checkbox"
+          [(ngModel)]="product.collapsed"
+          id="product-{{productId}}"
+          />
+        <label for="product-{{productId}}">
+          <i
+            class="material-icons"
+            *ngIf="product.collapsed">keyboard_arrow_down</i>
+          <i
+            class="material-icons"
+            *ngIf="!product.collapsed">keyboard_arrow_up</i>
+        </label>
+      </div>
+    </h3>
+    <p *ngIf='product.description && product.collapsed === false'>{{ product.description }}</p>
+  </div>
+</div>
+<div *ngIf="products.length === 0">
+  <p>We have sold all products!<br/>Please come later for new benefits :-)</p>
+</div>

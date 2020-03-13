@@ -1,0 +1,38 @@
+@import '../../styles/colors';
+@import '../../styles/button';
+
+a {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+  margin: .2em 0 0 0;
+}
+
+ul li {
+  padding-bottom: 2px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+ul li a.nav-link {
+  cursor: pointer;
+  margin: 0 4px;
+  padding: 0;
+}
+
+ul li a.nav-link .nav-link-inner {
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+}

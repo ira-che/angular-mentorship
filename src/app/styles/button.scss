@@ -1,0 +1,51 @@
+@import 'colors.scss';
+@import "variables.scss";
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  border: none;
+  background-color: $base-color;
+  color: $bg_color;
+  font-size: $font-size;
+  cursor: pointer;
+}
+
+.button:not(.fancy-button):hover,
+button:not(.fancy-button):hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled,
+button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.button > *,
+button > * {
+  color: $bg_color;
+}
+
+.fancy-button {
+  background-color: $bg-color;
+  color: $base-color;
+}
+
+.fancy-button i.material-icons {
+  padding-right: 4px;
+  color: $base-color;
+}
+
+.fancy-button.dark {
+  background-color: $base-color;
+  color: $bg-color;
+}
+
+.fancy-button.dark i.material-icons {
+  color: $bg-color;
+}

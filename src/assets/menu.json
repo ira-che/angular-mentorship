@@ -1,0 +1,12 @@
+[
+  {
+    "title": "english lessons",
+    "url": "/english",
+    "alt": "english"
+  },
+  {
+    "title": "JS lessons",
+    "url": "/js",
+    "alt": "js"
+  }
+]

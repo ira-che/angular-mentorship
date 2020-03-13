@@ -1,0 +1,16 @@
+<ul
+  *ngIf="(menu | async)?.length"
+  role="navigation">
+  <li
+    *ngFor="let menuItem of menu | async; trackBy: trackByFunc"
+    class="ng-star-inserted">
+    <a
+      class="nav-link"
+      [routerLink]="[menuItem.url]"
+      [title]="'go to ' + menuItem.title">
+        <span class="nav-link-inner">
+          {{ menuItem.title }}
+        </span>
+    </a>
+  </li>
+</ul>
